@@ -13,21 +13,41 @@
 <table border="1">
     <tr>
         <td><h1>视频介绍</h1></td>
-        <td><h1>支持QQ</h1></td>
     </tr>
     <tr>
-        <td align="center">
-            <h2 style="color:red">精品视频 10元/个 </h2>
-            <h2 style="color:red">（消费 20元 随机赠送2个小视频）</h2>
-        </td>
-        <td align="center">
-            <h2>
-             QQ ： 2722744251<br>
-             QQ 频道（82i65sb8am） ： <a herf="https://pd.qq.com/s/3j25dcnuk">https://pd.qq.com/s/3j25dcnuk</a>
-            </h2>
+        <td align="left">
+            <h2 style="color:red">精品视频 10元/个（消费 20元 随机赠送3个小视频）</h2>
+            <br>
+            <h3 style="color:blue">客服 QQ ： <span id="qqText">2722744251</span></h3>
+            <h3 style="color:blue">客服邮箱 ： single.club.lover@gmail.com</h3>
+            <h3 style="color:blue">QQ 频道 ： <a href="https://pd.qq.com/s/3j25dcnuk">加入频道（82i65sb8am）</a></h3>
         </td>
     </tr>
 </table>
 </center>
  </body>
+ <script type="text/javascript">
+    function copyQq() {
+        var copy = document.getElementById("qqText").innerText;
+        copy.select(); // 选择对象
+        document.execCommand("Copy"); // 执行浏览器复制命令
+        alert('复制成功');
+    }
+ 
+    function copy2(x) {
+        if (document.selection) {
+            var range = document.body.createTextRange(); //ie
+            range.moveToElementText(x);
+            range.select();
+        } else if (window.getSelection) {
+            var selection = window.getSelection();
+            var range = document.createRange();
+            selection.removeAllRanges();
+            range.selectNodeContents(x);
+            selection.addRange(range);
+        }
+        document.execCommand("copy");
+    }
+ 
+</script>
 </html>
